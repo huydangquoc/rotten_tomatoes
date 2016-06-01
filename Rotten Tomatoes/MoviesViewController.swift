@@ -22,16 +22,21 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         let url = NSURL(string: "https://coderschool-movies.herokuapp.com/movies?api_key=xja087zcvxljadsflh214")!
         let request = NSURLRequest(URL: url)
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse?, data: NSData?, error: NSError?) in
+        let session = NSURLSession.sharedSession()
+        let dataTask = session.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
             do {
                 if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
                     self.movies = json["movies"] as? [NSDictionary]
-                    self.tableView.reloadData()
+                    // reload table from main thread
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.tableView.reloadData()
+                    })
                 }
             } catch {
                 // TODO: handle error
             }
         }
+        dataTask.resume()
         
         tableView.dataSource = self
         tableView.delegate = self
