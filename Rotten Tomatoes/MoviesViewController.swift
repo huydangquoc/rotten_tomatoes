@@ -26,8 +26,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         prepareRefreshControl()
         
-        TSMessage.setDefaultViewController(self.navigationController)
-        
         // show loading notification
         // disable UI interaction
         EZLoadingActivity.show("Loading...", disableUI: true)
@@ -55,24 +53,21 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
             guard error == nil else  {
-//                var title: String = "Error"
-//                if error!.domain == NSURLErrorDomain {
-//                    title = "Network Error"
-//                }
-//                // nortify user about error
-//                TSMessage.showNotificationWithTitle(title, subtitle: error!.localizedDescription, type: .Error)
-                
                 // clear table content
-                if self.movies != nil {
-                    self.movies!.removeAll()
-                }
+                // show error
+                if self.movies != nil { self.movies!.removeAll() }
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.tableView.reloadData()
                     
+                    var title: String = "Error"
+                    if error!.domain == NSURLErrorDomain { title = "Network Error" }
+                    // nortify user about error
+                    TSMessage.showNotificationWithTitle(title, subtitle: error!.localizedDescription, type: .Error)
+                    
+                    // hide loading
+                    if firstTime { EZLoadingActivity.hide() }
+                    self.refreshControl.endRefreshing()
                 })
-                // hide loading
-                if firstTime { EZLoadingActivity.hide() }
-                self.refreshControl.endRefreshing()
                 
                 return
             }
