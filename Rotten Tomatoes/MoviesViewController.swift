@@ -17,26 +17,62 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     var movies: [NSDictionary]?
+    var refreshControl: UIRefreshControl!
     
     // MARKs: - Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareRefreshControl()
+        
+        TSMessage.setDefaultViewController(self.navigationController)
+        
         // show loading notification
         // disable UI interaction
         EZLoadingActivity.show("Loading...", disableUI: true)
+
+        loadMovies(true)
         
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    func prepareRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(MoviesViewController.onRefresh), forControlEvents: .ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func loadMovies(firstTime: Bool) {
         let url = NSURL(string: "https://coderschool-movies.herokuapp.com/movies?api_key=xja087zcvxljadsflh214")!
         let request = NSURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
             guard error == nil else  {
-                // print("error loading from URL", error!)
-                TSMessage.showNotificationInViewController(self, title: "Network Error", subtitle: "Can't reach server", type: .Error, duration: 30.0, canBeDismissedByUser: true)
-
-                // disable loading notification
-                EZLoadingActivity.hide(success: false, animated: true)
+//                var title: String = "Error"
+//                if error!.domain == NSURLErrorDomain {
+//                    title = "Network Error"
+//                }
+//                // nortify user about error
+//                TSMessage.showNotificationWithTitle(title, subtitle: error!.localizedDescription, type: .Error)
+                
+                // clear table content
+                if self.movies != nil {
+                    self.movies!.removeAll()
+                }
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.tableView.reloadData()
+                    
+                })
+                // hide loading
+                if firstTime { EZLoadingActivity.hide() }
+                self.refreshControl.endRefreshing()
                 
                 return
             }
@@ -48,27 +84,27 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                     // reload table from main thread
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         self.tableView.reloadData()
-                        // hide loading notification
-                        EZLoadingActivity.hide()
+                        // hide loading
+                        if firstTime { EZLoadingActivity.hide() }
+                        self.refreshControl.endRefreshing()
                     })
                 }
             } catch {
                 // TODO: handle error
                 
-                // hide loading notification
-                EZLoadingActivity.hide()
+                // hide loading
+                if firstTime { EZLoadingActivity.hide() }
+                self.refreshControl.endRefreshing()
             }
         }
         dataTask.resume()
+    }
+    
+    func onRefresh() {
+        loadMovies(false)
+    }
         
-        tableView.dataSource = self
-        tableView.delegate = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // MARK: TableView functions
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies?.count ?? 0
