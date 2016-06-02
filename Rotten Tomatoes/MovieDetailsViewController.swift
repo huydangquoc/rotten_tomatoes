@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import EZLoadingActivity
 
 class MovieDetailsViewController: UIViewController {
 
@@ -29,6 +30,26 @@ class MovieDetailsViewController: UIViewController {
         let url = NSURL(string: movie.valueForKeyPath("posters.detailed") as! String)!
         imageView.setImageWithURL(url)
         
+        // Process notification for Poster loading
+        /*
+        // show loading notification
+         
+        EZLoadingActivity.show("Loading Poster...", disableUI: false)
+        let request = NSURLRequest(URL: url)
+        imageView.setImageWithURLRequest(request, placeholderImage: nil, success: { (request: NSURLRequest, response: NSHTTPURLResponse?, image: UIImage) in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                // set poster image
+                self.imageView.image = image
+                // hide loading notification
+                EZLoadingActivity.hide()
+            })
+        }) { (request: NSURLRequest, response: NSHTTPURLResponse?, error: NSError) in
+                // process error here
+            
+                // hide loading notification
+                EZLoadingActivity.hide()
+        }
+        */
     }
 
     override func didReceiveMemoryWarning() {
