@@ -8,5 +8,6 @@ target 'Rotten Tomatoes' do
   # Pods for Rotten Tomatoes
   pod 'AFNetworking', '~> 2.6'
   pod 'EZLoadingActivity'
+  pod 'TSMessages'
 
 end

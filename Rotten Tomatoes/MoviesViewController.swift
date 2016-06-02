@@ -9,6 +9,7 @@
 import UIKit
 import AFNetworking
 import EZLoadingActivity
+import TSMessages
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -31,8 +32,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
             guard error == nil else  {
-                print("error loading from URL", error!)
-                
+                // print("error loading from URL", error!)
+                TSMessage.showNotificationInViewController(self, title: "Network Error", subtitle: "Can't reach server", type: .Error, duration: 30.0, canBeDismissedByUser: true)
+
                 // disable loading notification
                 EZLoadingActivity.hide(success: false, animated: true)
                 

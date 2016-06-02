@@ -21,15 +21,21 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - EZLoadingActivity (0.8)
+  - HexColors (2.2.1)
+  - TSMessages (0.9.12):
+    - HexColors (~> 2.2.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6)
   - EZLoadingActivity
+  - TSMessages
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
+  HexColors: abfd172e329dab59888614ccba6f216cec59289d
+  TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc
 
-PODFILE CHECKSUM: edf66cbe569db19d075dd53911f490c679b59813
+PODFILE CHECKSUM: 1e25173a35d405a4776f5623d690264685ccd2a6
 
 COCOAPODS: 1.0.0
