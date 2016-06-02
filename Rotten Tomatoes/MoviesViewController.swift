@@ -25,6 +25,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         
         prepareRefreshControl()
+        TSMessage.setDefaultViewController(self.navigationController)
         
         // show loading notification
         // disable UI interaction
