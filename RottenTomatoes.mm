@@ -27,7 +27,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464754085338" FOLDED="true" ID="ID_1363641778" MODIFIED="1464754760552" POSITION="right" TEXT="Project Requirements">
+<node COLOR="#0033ff" CREATED="1464754085338" FOLDED="true" ID="ID_1363641778" MODIFIED="1464944222641" POSITION="right" TEXT="Project Requirements">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464754174597" FOLDED="true" ID="ID_388708111" MODIFIED="1464754391397" TEXT="1">
@@ -97,7 +97,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1464754289683" FOLDED="true" ID="ID_116552471" MODIFIED="1464754541628" TEXT="7">
+<node COLOR="#00b439" CREATED="1464754289683" FOLDED="true" ID="ID_116552471" MODIFIED="1464944221167" TEXT="7">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1464754453697" FOLDED="true" ID="ID_562832624" MODIFIED="1464754538474" TEXT="Implement segmented control to switch between list view and grid view (optional)">
@@ -204,7 +204,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464754755936" FOLDED="true" ID="ID_937149062" MODIFIED="1464754976359" POSITION="right" TEXT="References">
+<node COLOR="#0033ff" CREATED="1464754755936" FOLDED="true" ID="ID_937149062" MODIFIED="1464944193368" POSITION="right" TEXT="References">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464754768948" ID="ID_1523448253" LINK="http://cocoapods.org/" MODIFIED="1464754768950" TEXT="cocoapods.org">
@@ -231,7 +231,7 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1464845962482" FOLDED="true" ID="ID_879116672" MODIFIED="1464853896023" TEXT="Foundation Framework Reference">
+<node COLOR="#00b439" CREATED="1464845962482" FOLDED="true" ID="ID_879116672" MODIFIED="1464944245476" TEXT="Foundation Framework Reference">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1464846077805" FOLDED="true" ID="ID_791370940" MODIFIED="1464853894189" TEXT="URL Loading System">
@@ -258,7 +258,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1464762122764" FOLDED="true" ID="ID_1922783997" LINK="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKit_Framework/index.html#//apple_ref/doc/uid/TP40006955" MODIFIED="1464853903202" TEXT="UIKit Framework Reference">
+<node COLOR="#00b439" CREATED="1464762122764" FOLDED="true" ID="ID_1922783997" LINK="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIKit_Framework/index.html#//apple_ref/doc/uid/TP40006955" MODIFIED="1464944243565" TEXT="UIKit Framework Reference">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1464756441808" ID="ID_924970192" LINK="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIViewController_Class/index.html#//apple_ref/occ/cl/UIViewController" MODIFIED="1464762156067" TEXT="UIViewController">
@@ -297,7 +297,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1464837395444" FOLDED="true" ID="ID_307789121" MODIFIED="1464853885882" TEXT="CocoaPods">
+<node COLOR="#00b439" CREATED="1464837395444" FOLDED="true" ID="ID_307789121" MODIFIED="1464944241084" TEXT="CocoaPods">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1464769910796" ID="ID_938956999" LINK="http://guides.codepath.com/ios/CocoaPods" MODIFIED="1464837407783" TEXT="guides.codepath.com &gt; Ios &gt; CocoaPods">
@@ -325,7 +325,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464754978157" FOLDED="true" ID="ID_1097561796" LINK="http://guides.codepath.com/ios" MODIFIED="1464845869484" POSITION="left" TEXT="Resources">
+<node COLOR="#0033ff" CREATED="1464754978157" FOLDED="true" ID="ID_1097561796" LINK="http://guides.codepath.com/ios" MODIFIED="1464944259404" POSITION="left" TEXT="Resources">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464755465915" FOLDED="true" ID="ID_754977300" MODIFIED="1464755539096" TEXT="Getting Started">
@@ -369,7 +369,7 @@
 <font NAME="SansSerif" SIZE="14"/>
 </node>
 </node>
-<node COLOR="#00b439" CREATED="1464755535624" ID="ID_631354441" MODIFIED="1464755536798" TEXT="Networking and Models  ">
+<node COLOR="#00b439" CREATED="1464755535624" FOLDED="true" ID="ID_631354441" MODIFIED="1464944232278" TEXT="Networking and Models  ">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1464755605320" ID="ID_782988818" LINK="http://guides.codepath.com/ios/Network-Programming" MODIFIED="1464755605321" TEXT="guides.codepath.com &gt; Ios &gt; Network-Programming">
@@ -399,6 +399,26 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 <node COLOR="#00b439" CREATED="1464755651997" ID="ID_1232016969" MODIFIED="1464755652937" TEXT="Great External Resources">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1464944264846" ID="ID_1054729883" MODIFIED="1464944269768" POSITION="left" TEXT="Questions">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1464944270604" ID="ID_772135089" MODIFIED="1464944280536" TEXT="is it possible to duplicate a view">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1464944283381" ID="ID_1713781054" MODIFIED="1464944305880" TEXT="best way to implement many view way in same controller">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1464944326599" POSITION="left" TEXT="external research">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1464944346053" ID="ID_1064620503" LINK="http://shrikar.com/swift-ios-tutorial-uisearchbar-and-uisearchbardelegate/" MODIFIED="1464944346057" TEXT="shrikar.com &gt; Swift-ios-tutorial-uisearchbar-and-uisearchbardelegate">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
