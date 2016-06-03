@@ -61,6 +61,10 @@
                                     <constraint firstAttribute="height" constant="44" id="vke-0J-dA7"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aJO-US-azA">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
@@ -130,6 +134,7 @@
                     <tabBarItem key="tabBarItem" title="Movies" id="vYe-3T-WeB"/>
                     <navigationItem key="navigationItem" title="Movies" id="tCC-iS-xEy"/>
                     <connections>
+                        <outlet property="searchBar" destination="plr-RC-qRx" id="59l-Y4-h41"/>
                         <outlet property="tableView" destination="aJO-US-azA" id="vSN-Zz-9qE"/>
                     </connections>
                 </viewController>

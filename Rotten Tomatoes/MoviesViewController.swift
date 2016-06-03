@@ -16,7 +16,10 @@ class MoviesViewController: UIViewController {
     // MARK: - Properties
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var movies: [NSDictionary]?
+    var filteredMovies: [NSDictionary] = []
     var refreshControl: UIRefreshControl!
     
     // MARKs: - Functions
@@ -35,6 +38,7 @@ class MoviesViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        searchBar.delegate = self
     }
     
     func prepareRefreshControl() {
@@ -107,7 +111,12 @@ class MoviesViewController: UIViewController {
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPathForCell(cell)!
         
-        let movie = movies![indexPath.row]
+        let movie: NSDictionary
+        if !(searchBar.text?.isEmpty)! {
+            movie = filteredMovies[indexPath.row]
+        } else {
+            movie = movies![indexPath.row]
+        }
         
         let movieDetailsViewController = segue.destinationViewController as! MovieDetailsViewController
         movieDetailsViewController.movie = movie
@@ -122,6 +131,9 @@ extension MoviesViewController: UITableViewDataSource {
     // Tells the data source to return the number of rows in a given section of a table view.
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        if !(searchBar.text?.isEmpty)! {
+            return filteredMovies.count
+        }
         return movies?.count ?? 0
     }
     
@@ -129,7 +141,12 @@ extension MoviesViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
         
-        let movie = movies![indexPath.row]
+        let movie: NSDictionary
+        if !(searchBar.text?.isEmpty)! {
+            movie = filteredMovies[indexPath.row]
+        } else {
+            movie = movies![indexPath.row]
+        }
         cell.titleLabel.text = movie["title"] as? String
         cell.synopsisLabel.text = movie["synopsis"] as? String
         
@@ -151,3 +168,49 @@ extension MoviesViewController: UITableViewDelegate {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
+
+//
+// implement UISearchBarDelegate protocol
+//
+extension MoviesViewController: UISearchBarDelegate {
+    
+    // Tells the delegate when the user begins editing the search text.
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        
+        searchBar.showsCancelButton = true
+    }
+    
+    // Tells the delegate that the user finished editing the search text.
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        
+    }
+    
+    // Tells the delegate that the cancel button was tapped.
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        
+        searchBar.text = ""
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
+        self.tableView.reloadData()
+    }
+    
+    // Tells the delegate that the search button was tapped.
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
+    }
+    
+    // Tells the delegate that the user changed the search text.
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        guard movies != nil else { return }
+        filteredMovies = (movies!.filter({ (movie) -> Bool in
+            let title = movie["title"] as! String
+            return title.lowercaseString.containsString(searchText.lowercaseString)
+        }))
+        
+        self.tableView.reloadData()
+    }
+}
+
+
