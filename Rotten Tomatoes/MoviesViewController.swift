@@ -11,7 +11,7 @@ import AFNetworking
 import EZLoadingActivity
 import TSMessages
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MoviesViewController: UIViewController {
 
     // MARK: - Properties
     
@@ -99,29 +99,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     func onRefresh() {
         loadMovies(false)
     }
-        
-    // MARK: TableView functions
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies?.count ?? 0
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
-        
-        let movie = movies![indexPath.row]
-        cell.titleLabel.text = movie["title"] as? String
-        cell.synopsisLabel.text = movie["synopsis"] as? String
-        
-        let url = NSURL(string: movie.valueForKeyPath("posters.thumbnail") as! String)!
-        cell.posterView.setImageWithURL(url)
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
     
     // MARK: - Navigation
 
@@ -134,5 +111,43 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         let movieDetailsViewController = segue.destinationViewController as! MovieDetailsViewController
         movieDetailsViewController.movie = movie
+    }
+}
+
+//
+// implement UITableViewDataSource protocol
+//
+extension MoviesViewController: UITableViewDataSource {
+    
+    // Tells the data source to return the number of rows in a given section of a table view.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return movies?.count ?? 0
+    }
+    
+    // Asks the data source for a cell to insert in a particular location of the table view.
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
+        
+        let movie = movies![indexPath.row]
+        cell.titleLabel.text = movie["title"] as? String
+        cell.synopsisLabel.text = movie["synopsis"] as? String
+        
+        let url = NSURL(string: movie.valueForKeyPath("posters.thumbnail") as! String)!
+        cell.posterView.setImageWithURL(url)
+        
+        return cell
+    }
+}
+
+//
+// implement UITableViewDelegate protocol
+//
+extension MoviesViewController: UITableViewDelegate {
+    
+    // Tells the delegate that the specified row is now selected.
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

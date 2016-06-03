@@ -55,12 +55,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="plr-RC-qRx">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vke-0J-dA7"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aJO-US-azA">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="117" id="MoK-Vo-ONh" customClass="MovieCell" customModule="Rotten_Tomatoes" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="117"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MoK-Vo-ONh" id="k2g-Mx-JSH">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="116"/>
@@ -111,8 +118,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aJO-US-azA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mb0-u5-xnX"/>
+                            <constraint firstItem="plr-RC-qRx" firstAttribute="top" secondItem="g57-n0-hwi" secondAttribute="bottom" id="8cf-nc-tam"/>
+                            <constraint firstAttribute="trailing" secondItem="plr-RC-qRx" secondAttribute="trailing" id="LC7-zT-Fl3"/>
                             <constraint firstAttribute="trailing" secondItem="aJO-US-azA" secondAttribute="trailing" id="NBO-wW-d7R"/>
+                            <constraint firstItem="plr-RC-qRx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RWT-zH-phB"/>
+                            <constraint firstItem="aJO-US-azA" firstAttribute="top" secondItem="plr-RC-qRx" secondAttribute="bottom" id="aaj-aa-NJg"/>
                             <constraint firstAttribute="bottom" secondItem="aJO-US-azA" secondAttribute="bottom" id="bw7-pO-bkI"/>
                             <constraint firstItem="aJO-US-azA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dRz-fE-7dc"/>
                         </constraints>
