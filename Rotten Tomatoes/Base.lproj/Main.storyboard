@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-311.25" y="-26.408450704225352"/>
         </scene>
-        <!--Ds View Controller-->
+        <!--DVDs View Controller Scene-->
         <scene sceneID="m7K-Ts-FeA">
             <objects>
-                <viewController id="eUM-sH-67C" customClass="DVDsViewController" customModule="Rotten_Tomatoes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eUM-sH-67C" userLabel="DVDs View Controller Scene" customClass="DVDsViewController" customModule="Rotten_Tomatoes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QVB-Ic-lAt"/>
                         <viewControllerLayoutGuide type="bottom" id="EJo-8D-rSU"/>
@@ -216,7 +216,7 @@
         <scene sceneID="n2g-82-Ckd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g30-62-nBk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Movies" id="pYa-VF-Z1G"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="Movies" id="pYa-VF-Z1G"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rIM-if-4h4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -235,7 +235,7 @@
         <scene sceneID="ojL-z8-aLq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mHW-eS-qab" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="DVDs" id="aIl-7L-KEz"/>
+                    <tabBarItem key="tabBarItem" title="DVDs" image="DVDs" id="aIl-7L-KEz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cKk-5c-WnN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -251,4 +251,8 @@
             <point key="canvasLocation" x="594.375" y="-288.38028169014081"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DVDs" width="25" height="25"/>
+        <image name="Movies" width="25" height="25"/>
+    </resources>
 </document>
