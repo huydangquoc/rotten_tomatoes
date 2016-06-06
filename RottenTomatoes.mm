@@ -224,7 +224,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464754909852" ID="ID_1294751209" MODIFIED="1464852574892" POSITION="left" TEXT="Need to know">
+<node COLOR="#0033ff" CREATED="1464754909852" FOLDED="true" ID="ID_1294751209" MODIFIED="1465184432014" POSITION="left" TEXT="Need to know">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464754927281" ID="ID_1087860427" MODIFIED="1464837388059" TEXT="Api Programming">
@@ -403,7 +403,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464944264846" ID="ID_1054729883" MODIFIED="1464944269768" POSITION="left" TEXT="Questions">
+<node COLOR="#0033ff" CREATED="1464944264846" FOLDED="true" ID="ID_1054729883" MODIFIED="1465184431087" POSITION="left" TEXT="Questions">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464944270604" ID="ID_772135089" MODIFIED="1464944280536" TEXT="is it possible to duplicate a view">
@@ -415,10 +415,33 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1464944326599" POSITION="left" TEXT="external research">
+<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465185612648" POSITION="left" TEXT="external research">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464944346053" ID="ID_1064620503" LINK="http://shrikar.com/swift-ios-tutorial-uisearchbar-and-uisearchbardelegate/" MODIFIED="1464944346057" TEXT="shrikar.com &gt; Swift-ios-tutorial-uisearchbar-and-uisearchbardelegate">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1465185675301" ID="ID_46026598" LINK="http://stackoverflow.com/questions/24111770/make-a-simple-fade-in-animation-in-swift" MODIFIED="1465185685935" TEXT="Make a simple fade in animation in Swift?">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1465187623567" ID="ID_384055995" LINK="http://www.overacker.me/blog/2015/01/12/image-caching-with-afnetworking" MODIFIED="1465187631354" TEXT="Image Caching With AFNetworking">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1465188677045" ID="ID_520576006" LINK="http://stackoverflow.com/questions/22686087/white-flash-when-setimagewithurl-displays-a-cached-image" MODIFIED="1465188697527" TEXT="White flash when setImageWithUrl displays a cached image">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      should check response, not request
+    </p>
+  </body>
+</html>
+</richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>

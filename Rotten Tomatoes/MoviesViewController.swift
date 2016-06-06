@@ -151,8 +151,22 @@ extension MoviesViewController: UITableViewDataSource {
         cell.synopsisLabel.text = movie["synopsis"] as? String
         
         let url = NSURL(string: movie.valueForKeyPath("posters.thumbnail") as! String)!
-        cell.posterView.setImageWithURL(url)
-        
+        let request = NSURLRequest(URL: url)
+        cell.posterView.setImageWithURLRequest(request, placeholderImage: nil, success: { (request: NSURLRequest, response: NSHTTPURLResponse?, image: UIImage) in
+            // image comes from network
+            if (response != nil) {
+                // set poster image with fade in animation
+                cell.posterView.setImageWithFadeIn(image)
+            }
+            // image comes from cache
+            else {
+                cell.posterView.image = image
+            }
+        }) { (request: NSURLRequest, response: NSHTTPURLResponse?, error: NSError) in
+            // process error here
+            debugPrint("error code: \(error.code), description: \(error.localizedDescription)")
+        }
+
         return cell
     }
 }
@@ -213,4 +227,17 @@ extension MoviesViewController: UISearchBarDelegate {
     }
 }
 
+//
+// support fade in image load from URL
+//
+extension UIImageView {
+    
+    func setImageWithFadeIn(image: UIImage) {
+        self.alpha = 0.0
+        self.image = image
+        UIView.animateWithDuration(1.5) { 
+            self.alpha = 1.0
+        }
+    }
+}
 
