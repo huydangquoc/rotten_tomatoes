@@ -41,17 +41,16 @@ class MoviesViewController: UIViewController {
         searchBar.delegate = self
         
         // UI setup
+        self.tableView.backgroundColor = UIColor.blackColor()
+        
         searchBar.barStyle = UIBarStyle.Black
         searchBar.tintColor = UIColor.colorWithRGBHex(0xFFCC00)
         let textFieldInsideSearchBar = searchBar.valueForKey("searchField") as? UITextField
         textFieldInsideSearchBar?.textColor = UIColor.colorWithRGBHex(0xFFCC00)
+        searchBar.keyboardAppearance = .Dark
         
         refreshControl.backgroundColor = UIColor.blackColor()
         refreshControl.tintColor = UIColor.colorWithRGBHex(0xFFCC00)
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
     }
     
     func prepareRefreshControl() {
@@ -59,7 +58,7 @@ class MoviesViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(MoviesViewController.onRefresh), forControlEvents: .ValueChanged)
         tableView.insertSubview(refreshControl, atIndex: 0)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -180,6 +179,9 @@ extension MoviesViewController: UITableViewDataSource {
             debugPrint("error code: \(error.code), description: \(error.localizedDescription)")
         }
 
+        // clear cell background to get rid of WHITE background by default
+        cell.backgroundColor = UIColor.clearColor()
+        
         return cell
     }
 }

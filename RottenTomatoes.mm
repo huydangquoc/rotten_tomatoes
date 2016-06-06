@@ -415,7 +415,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465203217631" POSITION="left" TEXT="external research">
+<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465204117816" POSITION="left" TEXT="external research">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464944346053" ID="ID_1064620503" LINK="http://shrikar.com/swift-ios-tutorial-uisearchbar-and-uisearchbardelegate/" MODIFIED="1464944346057" TEXT="shrikar.com &gt; Swift-ios-tutorial-uisearchbar-and-uisearchbardelegate">
@@ -449,6 +449,14 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 <node COLOR="#00b439" CREATED="1465203214601" ID="ID_1913873357" LINK="http://stackoverflow.com/questions/26284658/searchbar-how-to-change-text-color" MODIFIED="1465203214606" TEXT="stackoverflow.com &gt; Questions &gt; 26284658 &gt; Searchbar-how-to-change-text-color">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1465204115921" ID="ID_1093820040" LINK="http://stackoverflow.com/questions/11920156/custom-uitableviewcell-selection-style" MODIFIED="1465204115926" TEXT="stackoverflow.com &gt; Questions &gt; 11920156 &gt; Custom-uitableviewcell-selection-style">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1465204721792" ID="ID_121055251" LINK="http://stackoverflow.com/questions/30679701/ios-swift-how-to-change-background-color-of-table-view" MODIFIED="1465204721796" TEXT="stackoverflow.com &gt; Questions &gt; 30679701 &gt; Ios-swift-how-to-change-background-color-of-table-view">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
