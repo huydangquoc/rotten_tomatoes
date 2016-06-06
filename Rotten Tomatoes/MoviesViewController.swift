@@ -39,6 +39,19 @@ class MoviesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         searchBar.delegate = self
+        
+        // UI setup
+        searchBar.barStyle = UIBarStyle.Black
+        searchBar.tintColor = UIColor.colorWithRGBHex(0xFFCC00)
+        let textFieldInsideSearchBar = searchBar.valueForKey("searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = UIColor.colorWithRGBHex(0xFFCC00)
+        
+        refreshControl.backgroundColor = UIColor.blackColor()
+        refreshControl.tintColor = UIColor.colorWithRGBHex(0xFFCC00)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     func prepareRefreshControl() {
@@ -226,21 +239,3 @@ extension MoviesViewController: UISearchBarDelegate {
         self.tableView.reloadData()
     }
 }
-
-//
-// support fade in image load from URL
-//
-extension UIImageView {
-    
-    /**
-     Set image with fade in animation
-     */
-    func setImageWithFadeIn(image: UIImage) {
-        self.alpha = 0.0
-        self.image = image
-        UIView.animateWithDuration(1.5) { 
-            self.alpha = 1.0
-        }
-    }
-}
-

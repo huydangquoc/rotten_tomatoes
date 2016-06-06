@@ -415,7 +415,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464944312087" FOLDED="true" ID="ID_136714950" MODIFIED="1465191868496" POSITION="left" TEXT="external research">
+<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465203217631" POSITION="left" TEXT="external research">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464944346053" ID="ID_1064620503" LINK="http://shrikar.com/swift-ios-tutorial-uisearchbar-and-uisearchbardelegate/" MODIFIED="1464944346057" TEXT="shrikar.com &gt; Swift-ios-tutorial-uisearchbar-and-uisearchbardelegate">
@@ -440,8 +440,15 @@
       should check response, not request
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1465202772259" ID="ID_378480248" LINK="http://stackoverflow.com/questions/26008536/navigationbar-bar-tint-and-title-text-color-in-ios-8" MODIFIED="1465202772279" TEXT="stackoverflow.com &gt; Questions &gt; 26008536 &gt; Navigationbar-bar-tint-and-title-text-color-in-ios-8">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1465203214601" ID="ID_1913873357" LINK="http://stackoverflow.com/questions/26284658/searchbar-how-to-change-text-color" MODIFIED="1465203214606" TEXT="stackoverflow.com &gt; Questions &gt; 26284658 &gt; Searchbar-how-to-change-text-color">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>

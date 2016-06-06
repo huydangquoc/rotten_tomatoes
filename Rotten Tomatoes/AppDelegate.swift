@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        UINavigationBar.appearance().barStyle = UIBarStyle.Black
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.colorWithRGBHex(0xFFCC00)]
+        
+        UITabBar.appearance().tintColor = UIColor.colorWithRGBHex(0xFFCC00)
+        UITabBar.appearance().barTintColor = UIColor.blackColor()
+        UITabBar.appearance().alpha = 0.8
+        
         return true
     }
 

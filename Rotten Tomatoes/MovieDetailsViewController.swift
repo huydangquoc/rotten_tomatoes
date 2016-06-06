@@ -47,33 +47,3 @@ class MovieDetailsViewController: UIViewController {
     }
     */
 }
-
-//
-// support load image with thumbnail
-//
-extension UIImageView {
-    
-    /**
-     Load thumbnail, then load full size image
-     */
-    func setImageWithThumbnail(thumbnailLink: String, imageLink: String) {
-        
-        let thumbnailURL = NSURL(string: thumbnailLink)!
-        // load thumbnail poster first
-        
-        let request = NSURLRequest(URL: thumbnailURL)
-        self.setImageWithURLRequest(request, placeholderImage: nil, success: { (request: NSURLRequest, response: NSHTTPURLResponse?, image: UIImage) in
-            // load thumbnail image
-            self.image = image
-            // then, load full size image
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let url = NSURL(string: imageLink)!
-                self.setImageWithURL(url)
-            })
-            
-        }) { (request: NSURLRequest, response: NSHTTPURLResponse?, error: NSError) in
-            // process error here
-            debugPrint("error code: \(error.code), description: \(error.localizedDescription)")
-        }
-    }
-}
