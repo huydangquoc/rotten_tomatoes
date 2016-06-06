@@ -181,6 +181,10 @@ extension MoviesViewController: UITableViewDataSource {
 
         // clear cell background to get rid of WHITE background by default
         cell.backgroundColor = UIColor.clearColor()
+        // config cell selected background
+        let customSelectionView = UIView(frame: cell.frame)
+        customSelectionView.backgroundColor = UIColor.colorWithRGBHex(0xFFCC00)
+        cell.selectedBackgroundView = customSelectionView
         
         return cell
     }

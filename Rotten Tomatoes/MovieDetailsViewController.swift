@@ -30,6 +30,9 @@ class MovieDetailsViewController: UIViewController {
         let thumbnailLink = movie.valueForKeyPath("posters.thumbnail") as! String
         let imageLink = self.movie.valueForKeyPath("posters.detailed") as! String
         self.imageView.setImageWithThumbnail(thumbnailLink, imageLink: imageLink)
+        
+        // UI setup
+        self.view.backgroundColor = UIColor.blackColor()
     }
 
     override func didReceiveMemoryWarning() {

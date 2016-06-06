@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().barTintColor = UIColor.blackColor()
         UITabBar.appearance().alpha = 0.8
         
-        EZLoadingActivity.Settings.BackgroundColor = UIColor.lightGrayColor()
+        EZLoadingActivity.Settings.BackgroundColor = UIColor.darkGrayColor()
         EZLoadingActivity.Settings.TextColor = UIColor.colorWithRGBHex(0xFFCC00)
         EZLoadingActivity.Settings.ActivityColor = UIColor.colorWithRGBHex(0xFFCC00)
         

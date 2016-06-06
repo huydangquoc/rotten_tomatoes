@@ -418,7 +418,7 @@
 <node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465204117816" POSITION="left" TEXT="external research">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1464944346053" ID="ID_1064620503" LINK="http://shrikar.com/swift-ios-tutorial-uisearchbar-and-uisearchbardelegate/" MODIFIED="1464944346057" TEXT="shrikar.com &gt; Swift-ios-tutorial-uisearchbar-and-uisearchbardelegate">
+<node COLOR="#00b439" CREATED="1464944346053" ID="ID_1064620503" LINK="http://shrikar.com/swift-ios-tutorial-uisearchbar-and-uisearchbardelegate/" MODIFIED="1465220832197" TEXT="Swift iOS Tutorial: UISearchBar and UISearchBarDelegate">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
@@ -444,24 +444,24 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1465202772259" ID="ID_378480248" LINK="http://stackoverflow.com/questions/26008536/navigationbar-bar-tint-and-title-text-color-in-ios-8" MODIFIED="1465202772279" TEXT="stackoverflow.com &gt; Questions &gt; 26008536 &gt; Navigationbar-bar-tint-and-title-text-color-in-ios-8">
+<node COLOR="#00b439" CREATED="1465202772259" ID="ID_378480248" LINK="http://stackoverflow.com/questions/26008536/navigationbar-bar-tint-and-title-text-color-in-ios-8" MODIFIED="1465220795896" TEXT="NavigationBar bar, tint, and title text color in iOS 8">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1465203214601" ID="ID_1913873357" LINK="http://stackoverflow.com/questions/26284658/searchbar-how-to-change-text-color" MODIFIED="1465203214606" TEXT="stackoverflow.com &gt; Questions &gt; 26284658 &gt; Searchbar-how-to-change-text-color">
+<node COLOR="#00b439" CREATED="1465203214601" ID="ID_1913873357" LINK="http://stackoverflow.com/questions/26284658/searchbar-how-to-change-text-color" MODIFIED="1465220753816" TEXT="SearchBar, how to change text color?">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1465204115921" ID="ID_1093820040" LINK="http://stackoverflow.com/questions/11920156/custom-uitableviewcell-selection-style" MODIFIED="1465204115926" TEXT="stackoverflow.com &gt; Questions &gt; 11920156 &gt; Custom-uitableviewcell-selection-style">
+<node COLOR="#00b439" CREATED="1465204115921" ID="ID_1093820040" LINK="http://stackoverflow.com/questions/11920156/custom-uitableviewcell-selection-style" MODIFIED="1465220728023" TEXT="Custom UITableViewCell selection style?">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1465204721792" ID="ID_121055251" LINK="http://stackoverflow.com/questions/30679701/ios-swift-how-to-change-background-color-of-table-view" MODIFIED="1465204721796" TEXT="stackoverflow.com &gt; Questions &gt; 30679701 &gt; Ios-swift-how-to-change-background-color-of-table-view">
+<node COLOR="#00b439" CREATED="1465204721792" ID="ID_121055251" LINK="http://stackoverflow.com/questions/30679701/ios-swift-how-to-change-background-color-of-table-view" MODIFIED="1465220675013" TEXT="iOS Swift - How to change background color of Table View?">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1465191871049" ID="ID_550950703" MODIFIED="1465191887071" POSITION="left" TEXT="Bai tap tham khao">
+<node COLOR="#0033ff" CREATED="1465191871049" FOLDED="true" ID="ID_550950703" MODIFIED="1465220839715" POSITION="left" TEXT="Bai tap tham khao">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1465191914325" ID="ID_1802409163" LINK="https://github.com/ziyang0621/Rotten-Swift" MODIFIED="1465191914328" TEXT="https://github.com/ziyang0621/Rotten-Swift">
