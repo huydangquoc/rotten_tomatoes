@@ -224,7 +224,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464754909852" FOLDED="true" ID="ID_1294751209" MODIFIED="1465184432014" POSITION="left" TEXT="Need to know">
+<node COLOR="#0033ff" CREATED="1464754909852" FOLDED="true" ID="ID_1294751209" MODIFIED="1465191866641" POSITION="left" TEXT="Need to know">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464754927281" ID="ID_1087860427" MODIFIED="1464837388059" TEXT="Api Programming">
@@ -325,7 +325,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464754978157" FOLDED="true" ID="ID_1097561796" LINK="http://guides.codepath.com/ios" MODIFIED="1464944259404" POSITION="left" TEXT="Resources">
+<node COLOR="#0033ff" CREATED="1464754978157" FOLDED="true" ID="ID_1097561796" LINK="http://guides.codepath.com/ios" MODIFIED="1465191864564" POSITION="left" TEXT="Resources">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464755465915" FOLDED="true" ID="ID_754977300" MODIFIED="1464755539096" TEXT="Getting Started">
@@ -415,7 +415,7 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465185612648" POSITION="left" TEXT="external research">
+<node COLOR="#0033ff" CREATED="1464944312087" FOLDED="true" ID="ID_136714950" MODIFIED="1465191868496" POSITION="left" TEXT="external research">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464944346053" ID="ID_1064620503" LINK="http://shrikar.com/swift-ios-tutorial-uisearchbar-and-uisearchbardelegate/" MODIFIED="1464944346057" TEXT="shrikar.com &gt; Swift-ios-tutorial-uisearchbar-and-uisearchbardelegate">
@@ -442,6 +442,14 @@
   </body>
 </html>
 </richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1465191871049" ID="ID_550950703" MODIFIED="1465191887071" POSITION="left" TEXT="Bai tap tham khao">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1465191914325" ID="ID_1802409163" LINK="https://github.com/ziyang0621/Rotten-Swift" MODIFIED="1465191914328" TEXT="https://github.com/ziyang0621/Rotten-Swift">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>

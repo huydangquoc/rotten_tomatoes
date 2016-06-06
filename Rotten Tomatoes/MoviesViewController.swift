@@ -232,6 +232,9 @@ extension MoviesViewController: UISearchBarDelegate {
 //
 extension UIImageView {
     
+    /**
+     Set image with fade in animation
+     */
     func setImageWithFadeIn(image: UIImage) {
         self.alpha = 0.0
         self.image = image

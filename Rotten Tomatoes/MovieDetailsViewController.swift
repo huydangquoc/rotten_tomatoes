@@ -27,29 +27,9 @@ class MovieDetailsViewController: UIViewController {
         titleLabel.text = movie["title"] as? String
         synopsisLabel.text = movie["synopsis"] as? String
         
-        let url = NSURL(string: movie.valueForKeyPath("posters.detailed") as! String)!
-        imageView.setImageWithURL(url)
-        
-        // Process notification for Poster loading
-        /*
-        // show loading notification
-         
-        EZLoadingActivity.show("Loading Poster...", disableUI: false)
-        let request = NSURLRequest(URL: url)
-        imageView.setImageWithURLRequest(request, placeholderImage: nil, success: { (request: NSURLRequest, response: NSHTTPURLResponse?, image: UIImage) in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                // set poster image
-                self.imageView.image = image
-                // hide loading notification
-                EZLoadingActivity.hide()
-            })
-        }) { (request: NSURLRequest, response: NSHTTPURLResponse?, error: NSError) in
-                // process error here
-            
-                // hide loading notification
-                EZLoadingActivity.hide()
-        }
-        */
+        let thumbnailLink = movie.valueForKeyPath("posters.thumbnail") as! String
+        let imageLink = self.movie.valueForKeyPath("posters.detailed") as! String
+        self.imageView.setImageWithThumbnail(thumbnailLink, imageLink: imageLink)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,7 +37,6 @@ class MovieDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -67,5 +46,34 @@ class MovieDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+//
+// support load image with thumbnail
+//
+extension UIImageView {
+    
+    /**
+     Load thumbnail, then load full size image
+     */
+    func setImageWithThumbnail(thumbnailLink: String, imageLink: String) {
+        
+        let thumbnailURL = NSURL(string: thumbnailLink)!
+        // load thumbnail poster first
+        
+        let request = NSURLRequest(URL: thumbnailURL)
+        self.setImageWithURLRequest(request, placeholderImage: nil, success: { (request: NSURLRequest, response: NSHTTPURLResponse?, image: UIImage) in
+            // load thumbnail image
+            self.image = image
+            // then, load full size image
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let url = NSURL(string: imageLink)!
+                self.setImageWithURL(url)
+            })
+            
+        }) { (request: NSURLRequest, response: NSHTTPURLResponse?, error: NSError) in
+            // process error here
+            debugPrint("error code: \(error.code), description: \(error.localizedDescription)")
+        }
+    }
 }
