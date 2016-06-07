@@ -57,7 +57,7 @@ class MoviesViewController: UIViewController {
         
         self.tabBarController?.tabBar.hidden = false
     }
-    
+        
     func prepareRefreshControl() {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(MoviesViewController.onRefresh), forControlEvents: .ValueChanged)
