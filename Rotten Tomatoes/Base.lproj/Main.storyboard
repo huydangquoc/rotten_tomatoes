@@ -17,31 +17,47 @@
                     </tabBar>
                     <connections>
                         <segue destination="g30-62-nBk" kind="relationship" relationship="viewControllers" id="9vY-Pm-imK"/>
-                        <segue destination="mHW-eS-qab" kind="relationship" relationship="viewControllers" id="N6Y-B8-OvY"/>
+                        <segue destination="iHQ-M8-nr3" kind="relationship" relationship="viewControllers" id="opS-Nz-wVa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C71-93-I6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-311.25" y="-26.408450704225352"/>
         </scene>
-        <!--DVDs View Controller Scene-->
-        <scene sceneID="m7K-Ts-FeA">
+        <!--Collection View Controller-->
+        <scene sceneID="xcG-q1-OJD">
             <objects>
-                <viewController id="eUM-sH-67C" userLabel="DVDs View Controller Scene" customClass="DVDsViewController" customModule="Rotten_Tomatoes" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QVB-Ic-lAt"/>
-                        <viewControllerLayoutGuide type="bottom" id="EJo-8D-rSU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tJS-S8-oAy">
+                <collectionViewController id="DEb-O6-bg6" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="POU-jE-rhd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="hGE-Gg-Vg8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oc1-zg-NCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hdh-Ww-0Fc">
+                            <size key="itemSize" width="150" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cMs-1h-0GI">
+                                <rect key="frame" x="0.0" y="64" width="150" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="DEb-O6-bg6" id="3NG-3I-T0F"/>
+                            <outlet property="delegate" destination="DEb-O6-bg6" id="kXW-bL-7CY"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="edx-lk-Atz"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vlk-vy-gUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301.25" y="-288.38028169014081"/>
+            <point key="canvasLocation" x="1301" y="-277"/>
         </scene>
         <!--Movies-->
         <scene sceneID="tne-QT-ifu">
@@ -243,23 +259,23 @@
             <point key="canvasLocation" x="594.375" y="399.2957746478873"/>
         </scene>
         <!--DVDs-->
-        <scene sceneID="ojL-z8-aLq">
+        <scene sceneID="noc-9o-x7Z">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mHW-eS-qab" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="DVDs" image="DVDs" id="aIl-7L-KEz"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iHQ-M8-nr3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="DVDs" image="DVDs" id="YZi-QU-5F8"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cKk-5c-WnN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KfO-IP-hoJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eUM-sH-67C" kind="relationship" relationship="rootViewController" id="Xzu-Cs-jQ7"/>
+                        <segue destination="DEb-O6-bg6" kind="relationship" relationship="rootViewController" id="bnt-ee-9jo"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="74d-Pd-qZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zux-gU-U2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594.375" y="-288.38028169014081"/>
+            <point key="canvasLocation" x="594" y="-277"/>
         </scene>
     </scenes>
     <resources>
