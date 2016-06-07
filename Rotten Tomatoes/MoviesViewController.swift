@@ -53,6 +53,11 @@ class MoviesViewController: UIViewController {
         refreshControl.tintColor = UIColor.colorWithRGBHex(0xFFCC00)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+        self.tabBarController?.tabBar.hidden = false
+    }
+    
     func prepareRefreshControl() {
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(MoviesViewController.onRefresh), forControlEvents: .ValueChanged)

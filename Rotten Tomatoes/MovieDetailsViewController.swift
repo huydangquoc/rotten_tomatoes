@@ -16,6 +16,8 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
+    @IBOutlet weak var detailScrollView: UIScrollView!
+    @IBOutlet weak var detailContentView: UIView!
     
     var movie: NSDictionary!
     
@@ -24,6 +26,7 @@ class MovieDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = movie["title"] as? String
         titleLabel.text = movie["title"] as? String
         synopsisLabel.text = movie["synopsis"] as? String
         
@@ -33,6 +36,7 @@ class MovieDetailsViewController: UIViewController {
         
         // UI setup
         self.view.backgroundColor = UIColor.blackColor()
+        self.tabBarController?.tabBar.hidden = true
     }
 
     override func didReceiveMemoryWarning() {

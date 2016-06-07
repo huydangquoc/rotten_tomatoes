@@ -460,8 +460,20 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
+<node COLOR="#00b439" CREATED="1465282541935" ID="ID_979161640" MODIFIED="1465282551118" TEXT="Scroll View">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1465282520327" ID="ID_378227244" LINK="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithScrollViews.html" MODIFIED="1465282557495" TEXT="Working with Scroll Views">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
 </node>
-<node COLOR="#0033ff" CREATED="1465191871049" FOLDED="true" ID="ID_550950703" MODIFIED="1465220839715" POSITION="left" TEXT="Bai tap tham khao">
+<node COLOR="#990000" CREATED="1465272022171" ID="ID_121750170" LINK="http://www.appcoda.com/uiscrollview-introduction/" MODIFIED="1465282562992" TEXT="A Beginner&#x2019;s Guide to UIScrollView">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+</node>
+</node>
+<node COLOR="#0033ff" CREATED="1465191871049" FOLDED="true" ID="ID_550950703" MODIFIED="1465272019075" POSITION="left" TEXT="Bai tap tham khao">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1465191914325" ID="ID_1802409163" LINK="https://github.com/ziyang0621/Rotten-Swift" MODIFIED="1465191914328" TEXT="https://github.com/ziyang0621/Rotten-Swift">
