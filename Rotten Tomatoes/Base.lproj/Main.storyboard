@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -24,28 +25,90 @@
             </objects>
             <point key="canvasLocation" x="-311.25" y="-26.408450704225352"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--DVDs View Controller-->
         <scene sceneID="xcG-q1-OJD">
             <objects>
-                <collectionViewController id="DEb-O6-bg6" sceneMemberID="viewController">
+                <collectionViewController id="DEb-O6-bg6" userLabel="DVDs View Controller" customClass="DVDsViewController" customModule="Rotten_Tomatoes" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="POU-jE-rhd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hdh-Ww-0Fc">
-                            <size key="itemSize" width="150" height="200"/>
+                            <size key="itemSize" width="140" height="220"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cMs-1h-0GI">
-                                <rect key="frame" x="0.0" y="64" width="150" height="200"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DVDsCell" id="cMs-1h-0GI" customClass="DVDCell" customModule="Rotten_Tomatoes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="140" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="220"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xJr-7g-9nm">
+                                            <rect key="frame" x="5" y="5" width="130" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="Pt7-AC-GNM"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-GT-67q">
+                                            <rect key="frame" x="102" y="191" width="33" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="KK1-7e-PxW"/>
+                                                <constraint firstAttribute="width" constant="33" id="yZy-a7-w7B"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMj-VD-oi7">
+                                            <rect key="frame" x="5" y="191" width="60" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="3pu-WG-XtH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The last thing happens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeX-Kl-EZY">
+                                            <rect key="frame" x="5" y="159" width="130" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fresh" translatesAutoresizingMaskIntoConstraints="NO" id="RRU-e2-f0M">
+                                            <rect key="frame" x="74" y="191" width="27" height="21"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="kNm-GT-67q" firstAttribute="top" secondItem="oeX-Kl-EZY" secondAttribute="bottom" constant="8" symbolic="YES" id="8M1-Ky-S2N"/>
+                                    <constraint firstItem="kNm-GT-67q" firstAttribute="baseline" secondItem="xMj-VD-oi7" secondAttribute="baseline" id="Hs3-FV-XrV"/>
+                                    <constraint firstItem="xJr-7g-9nm" firstAttribute="centerX" secondItem="oeX-Kl-EZY" secondAttribute="centerX" id="IvU-n1-sZC"/>
+                                    <constraint firstItem="xJr-7g-9nm" firstAttribute="top" secondItem="cMs-1h-0GI" secondAttribute="top" constant="5" id="JYZ-F0-QOA"/>
+                                    <constraint firstItem="kNm-GT-67q" firstAttribute="bottom" secondItem="cMs-1h-0GI" secondAttribute="bottomMargin" id="L9Y-bJ-hHn"/>
+                                    <constraint firstItem="oeX-Kl-EZY" firstAttribute="top" secondItem="xJr-7g-9nm" secondAttribute="bottom" constant="4" id="Pp3-pZ-tOb"/>
+                                    <constraint firstItem="xJr-7g-9nm" firstAttribute="trailing" secondItem="oeX-Kl-EZY" secondAttribute="trailing" id="QS4-Au-lBL"/>
+                                    <constraint firstItem="kNm-GT-67q" firstAttribute="leading" secondItem="RRU-e2-f0M" secondAttribute="trailing" constant="1" id="X9v-Is-GHl"/>
+                                    <constraint firstItem="kNm-GT-67q" firstAttribute="firstBaseline" secondItem="xMj-VD-oi7" secondAttribute="firstBaseline" id="alg-7B-iqv"/>
+                                    <constraint firstItem="kNm-GT-67q" firstAttribute="top" secondItem="RRU-e2-f0M" secondAttribute="top" id="dav-zh-Sxc"/>
+                                    <constraint firstItem="xJr-7g-9nm" firstAttribute="trailing" secondItem="kNm-GT-67q" secondAttribute="trailing" id="gqm-mW-p5g"/>
+                                    <constraint firstItem="xJr-7g-9nm" firstAttribute="leading" secondItem="cMs-1h-0GI" secondAttribute="leading" constant="5" id="lsQ-mf-iB0"/>
+                                    <constraint firstAttribute="trailing" secondItem="xJr-7g-9nm" secondAttribute="trailing" constant="5" id="nTc-I9-zeu"/>
+                                    <constraint firstItem="kNm-GT-67q" firstAttribute="bottom" secondItem="RRU-e2-f0M" secondAttribute="bottom" id="qil-l7-Uvo"/>
+                                    <constraint firstItem="RRU-e2-f0M" firstAttribute="leading" secondItem="xMj-VD-oi7" secondAttribute="trailing" constant="9" id="sDC-FT-nJr"/>
+                                    <constraint firstItem="xMj-VD-oi7" firstAttribute="leading" secondItem="oeX-Kl-EZY" secondAttribute="leading" id="zgn-HG-0R9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="ratingImage" destination="RRU-e2-f0M" id="jvf-69-Z1L"/>
+                                    <outlet property="runTimeLabel" destination="xMj-VD-oi7" id="3fi-1L-oVf"/>
+                                    <outlet property="scoreLabel" destination="kNm-GT-67q" id="kog-GQ-PZv"/>
+                                    <outlet property="thumbnail" destination="xJr-7g-9nm" id="th6-of-bg8"/>
+                                    <outlet property="titleLabel" destination="oeX-Kl-EZY" id="Mxd-18-X06"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -53,7 +116,7 @@
                             <outlet property="delegate" destination="DEb-O6-bg6" id="kXW-bL-7CY"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="edx-lk-Atz"/>
+                    <navigationItem key="navigationItem" title="DVDs" id="edx-lk-Atz"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vlk-vy-gUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,6 +343,7 @@
     </scenes>
     <resources>
         <image name="DVDs" width="25" height="25"/>
+        <image name="Fresh" width="32" height="32"/>
         <image name="Movies" width="25" height="25"/>
     </resources>
 </document>

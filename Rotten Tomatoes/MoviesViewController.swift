@@ -27,7 +27,6 @@ class MoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareRefreshControl()
         TSMessage.setDefaultViewController(self.navigationController)
         
         // show loading notification
@@ -39,6 +38,8 @@ class MoviesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         searchBar.delegate = self
+        
+        prepareRefreshControl()
         
         // UI setup
         self.tableView.backgroundColor = UIColor.blackColor()
