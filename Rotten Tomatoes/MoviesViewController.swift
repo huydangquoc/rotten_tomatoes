@@ -45,13 +45,13 @@ class MoviesViewController: UIViewController {
         self.tableView.backgroundColor = UIColor.blackColor()
         
         searchBar.barStyle = UIBarStyle.Black
-        searchBar.tintColor = UIColor.colorWithRGBHex(0xFFCC00)
+        searchBar.tintColor = themeColor
         let textFieldInsideSearchBar = searchBar.valueForKey("searchField") as? UITextField
-        textFieldInsideSearchBar?.textColor = UIColor.colorWithRGBHex(0xFFCC00)
+        textFieldInsideSearchBar?.textColor = themeColor
         searchBar.keyboardAppearance = .Dark
         
         refreshControl.backgroundColor = UIColor.blackColor()
-        refreshControl.tintColor = UIColor.colorWithRGBHex(0xFFCC00)
+        refreshControl.tintColor = themeColor
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -189,7 +189,7 @@ extension MoviesViewController: UITableViewDataSource {
         cell.backgroundColor = UIColor.clearColor()
         // config cell selected background
         let customSelectionView = UIView(frame: cell.frame)
-        customSelectionView.backgroundColor = UIColor.colorWithRGBHex(0xFFCC00)
+        customSelectionView.backgroundColor = themeColor
         cell.selectedBackgroundView = customSelectionView
         
         return cell

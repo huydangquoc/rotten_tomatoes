@@ -9,6 +9,8 @@
 import UIKit
 import EZLoadingActivity
 
+let themeColor = UIColor.colorWithRGBHex(0xFFCC00)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,16 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         UINavigationBar.appearance().barStyle = UIBarStyle.Black
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.colorWithRGBHex(0xFFCC00)]
-        UINavigationBar.appearance().tintColor = UIColor.colorWithRGBHex(0xFFCC00)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : themeColor]
+        UINavigationBar.appearance().tintColor = themeColor
         
-        UITabBar.appearance().tintColor = UIColor.colorWithRGBHex(0xFFCC00)
+        UITabBar.appearance().tintColor = themeColor
         UITabBar.appearance().barTintColor = UIColor.blackColor()
         UITabBar.appearance().alpha = 0.8
         
         EZLoadingActivity.Settings.BackgroundColor = UIColor.darkGrayColor()
-        EZLoadingActivity.Settings.TextColor = UIColor.colorWithRGBHex(0xFFCC00)
-        EZLoadingActivity.Settings.ActivityColor = UIColor.colorWithRGBHex(0xFFCC00)
+        EZLoadingActivity.Settings.TextColor = themeColor
+        EZLoadingActivity.Settings.ActivityColor = themeColor
         
         return true
     }

@@ -39,6 +39,10 @@ class DVDsViewController: UICollectionViewController {
         prepareRefreshControl()
         
         // UI Setup code goes here
+        searchField.backgroundColor = UIColor.darkGrayColor()
+        searchField.textColor = themeColor
+        
+        refreshControl.tintColor = themeColor
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -155,7 +159,11 @@ class DVDsViewController: UICollectionViewController {
         cell.runTimeLabel.text = "\(DVD["runtime"] as! Int) min"
         cell.scoreLabel.text = "\(DVD.valueForKeyPath("ratings.critics_score") as! Int)%"
         let rating = DVD.valueForKeyPath("ratings.critics_rating") as! String
-        if rating == "Rotten" { cell.ratingImage.image = UIImage(named: "Rotten") }
+        if rating == "Rotten" {
+            cell.ratingImage.image = UIImage(named: "Rotten")
+        } else {
+            cell.ratingImage.image = UIImage(named: "Fresh")
+        }
         // set DVD thumbnail poster
         let url = NSURL(string: DVD.valueForKeyPath("posters.thumbnail") as! String)!
         let request = NSURLRequest(URL: url)
@@ -177,7 +185,7 @@ class DVDsViewController: UICollectionViewController {
         cell.backgroundColor = UIColor.clearColor()
         // config cell selected background
         let customSelectionView = UIView(frame: cell.frame)
-        customSelectionView.backgroundColor = UIColor.colorWithRGBHex(0xFFCC00)
+        customSelectionView.backgroundColor = themeColor
         cell.selectedBackgroundView = customSelectionView
         
         return cell

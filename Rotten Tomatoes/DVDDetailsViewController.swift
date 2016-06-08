@@ -11,7 +11,7 @@ import UIKit
 class DVDDetailsViewController: UIViewController {
 
     @IBOutlet weak var posterImage: UIImageView!
-    @IBOutlet weak var detailContentView: UIView!
+    @IBOutlet weak var swipeView: UIView!
     @IBOutlet weak var swipeButton: UIImageView!
     
     override func viewDidLoad() {
@@ -41,12 +41,12 @@ class DVDDetailsViewController: UIViewController {
             case UISwipeGestureRecognizerDirection.Up:
                 let frame = self.posterImage.frame
                 UIView.animateWithDuration(0.5, animations: {
-                    self.detailContentView.frame = frame
+                    self.swipeView.frame = frame
                 })
             case UISwipeGestureRecognizerDirection.Down:
-                let frame = self.detailContentView.frame
+                let frame = self.swipeView.frame
                 UIView.animateWithDuration(0.5, animations: {
-                    self.detailContentView.frame = CGRect(  x: frame.origin.x,
+                    self.swipeView.frame = CGRect(  x: frame.origin.x,
                                                             y: (frame.height - 150 + frame.origin.y),
                                                             width: frame.width,
                                                             height: 150)
