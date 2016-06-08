@@ -13,6 +13,10 @@ class DVDDetailsViewController: UIViewController {
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var swipeView: UIView!
     @IBOutlet weak var swipeButton: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var synopsisLabel: UILabel!
+    
+    var DVD: NSDictionary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,13 @@ class DVDDetailsViewController: UIViewController {
         swipeButton.addGestureRecognizer(swipeDown)
         swipeButton.userInteractionEnabled = true
         
+        titleLabel.text = DVD["title"] as? String
+        synopsisLabel.text = DVD["synopsis"] as? String
+        
+        let thumbnailLink = DVD.valueForKeyPath("posters.thumbnail") as! String
+        let imageLink = self.DVD.valueForKeyPath("posters.detailed") as! String
+        self.posterImage.setImageWithThumbnail(thumbnailLink, imageLink: imageLink)
+
         // UI setup
         self.view.backgroundColor = UIColor.blackColor()
         self.tabBarController?.tabBar.hidden = true

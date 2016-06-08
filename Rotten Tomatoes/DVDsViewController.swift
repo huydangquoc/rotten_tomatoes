@@ -115,15 +115,25 @@ class DVDsViewController: UICollectionViewController {
         loadDVDs(false)
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        let cell = sender as! UICollectionViewCell
+        let indexPath = (self.collectionView?.indexPathForCell(cell))!
+        
+        let DVD: NSDictionary
+        if !(searchField.text?.isEmpty)! {
+            DVD = filteredDVDs[indexPath.row]
+        } else {
+            DVD = DVDs![indexPath.row]
+        }
+        
+        //let DVDDetailsViewController = segue.destinationViewController as! DVDDetailsViewController
+        let dVDDetailsViewController = segue.destinationViewController as! DVDDetailsViewController
+        dVDDetailsViewController.DVD = DVD
     }
-    */
 
     // MARK: UICollectionViewDataSource
 
