@@ -403,10 +403,21 @@
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464944264846" FOLDED="true" ID="ID_1054729883" MODIFIED="1465184431087" POSITION="left" TEXT="Questions">
+<node COLOR="#0033ff" CREATED="1464944264846" ID="ID_1054729883" MODIFIED="1465374691403" POSITION="left" TEXT="Questions">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
-<node COLOR="#00b439" CREATED="1464944270604" ID="ID_772135089" MODIFIED="1464944280536" TEXT="is it possible to duplicate a view">
+<node COLOR="#00b439" CREATED="1464944270604" ID="ID_772135089" MODIFIED="1465374752135" TEXT="is it possible to duplicate a view">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Movies View and DVDs View are similar but have to duplicate implementation
+    </p>
+  </body>
+</html>
+</richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
@@ -414,8 +425,23 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
+<node COLOR="#00b439" CREATED="1465374757950" ID="ID_1717443934" MODIFIED="1465374802806" TEXT="autolayout with animation, best way">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      with animation, location will change, violate with auto layout rules, how to resolve?
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465204117816" POSITION="left" TEXT="external research">
+</node>
+<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465366962380" POSITION="left" TEXT="external research">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464944346053" ID="ID_1064620503" LINK="http://shrikar.com/swift-ios-tutorial-uisearchbar-and-uisearchbardelegate/" MODIFIED="1465220832197" TEXT="Swift iOS Tutorial: UISearchBar and UISearchBarDelegate">
@@ -471,6 +497,14 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="14"/>
 </node>
+</node>
+<node COLOR="#00b439" CREATED="1465366964583" ID="ID_1730472938" LINK="http://stackoverflow.com/questions/21355990/show-hidden-part-of-an-view-with-pulling-it-by-gestures" MODIFIED="1465366979298" TEXT="Show hidden part of an View with pulling it by gestures [closed]">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1465376812439" ID="ID_215830700" LINK="http://stackoverflow.com/questions/24215117/how-to-recognize-swipe-in-all-4-directions" MODIFIED="1465376812478" TEXT="stackoverflow.com &gt; Questions &gt; 24215117 &gt; How-to-recognize-swipe-in-all-4-directions">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
 <node COLOR="#0033ff" CREATED="1465191871049" FOLDED="true" ID="ID_550950703" MODIFIED="1465272019075" POSITION="left" TEXT="Bai tap tham khao">

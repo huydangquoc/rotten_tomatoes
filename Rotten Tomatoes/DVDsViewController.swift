@@ -21,6 +21,7 @@ class DVDsViewController: UICollectionViewController {
     var DVDs: [NSDictionary]?
     var filteredDVDs: [NSDictionary] = []
     var refreshControl: UIRefreshControl!
+    @IBOutlet weak var searchField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,6 +131,11 @@ class DVDsViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
+        
+        if !(searchField.text?.isEmpty)! {
+            return filteredDVDs.count
+        }
+        
         return DVDs?.count ?? 0
     }
 
@@ -138,7 +144,12 @@ class DVDsViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! DVDCell
         
         let DVD: NSDictionary
-        DVD = DVDs![indexPath.row]
+        if !(searchField.text?.isEmpty)! {
+            DVD = filteredDVDs[indexPath.row]
+        } else {
+            DVD = DVDs![indexPath.row]
+        }
+        
         // set DVD infos
         cell.titleLabel.text = DVD["title"] as? String
         cell.runTimeLabel.text = "\(DVD["runtime"] as! Int) min"
@@ -224,3 +235,44 @@ extension DVDsViewController : UICollectionViewDelegateFlowLayout {
     }
 }
 
+// config search
+extension DVDsViewController : UITextFieldDelegate {
+    
+    // Asks the delegate if the text field should process the pressing of the return button.
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        textField.addSubview(activityIndicator)
+        activityIndicator.frame = textField.bounds
+        activityIndicator.startAnimating()
+        
+        let result = searchDVDs(textField.text!)
+        
+        activityIndicator.removeFromSuperview()
+        
+        if result { self.collectionView?.reloadData() }
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Tells the delegate that the user changed the search text.
+    func searchDVDs(searchText: String) -> Bool  {
+        guard DVDs != nil else { return false }
+        filteredDVDs = (DVDs!.filter({ (DVD) -> Bool in
+            let title = DVD["title"] as! String
+            return title.lowercaseString.containsString(searchText.lowercaseString)
+        }))
+        
+        return true
+    }
+    
+    // Asks the delegate if the text field’s current contents should be removed.
+    func textFieldShouldClear(textField: UITextField) -> Bool {
+        
+        textField.text = ""
+        self.collectionView?.endEditing(true)
+        //textField.resignFirstResponder()
+        return true
+    }
+}
