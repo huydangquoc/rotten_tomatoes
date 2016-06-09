@@ -27,8 +27,6 @@ class MoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TSMessage.setDefaultViewController(self.navigationController)
-        
         // show loading notification
         // disable UI interaction
         EZLoadingActivity.show("Loading...", disableUI: true)

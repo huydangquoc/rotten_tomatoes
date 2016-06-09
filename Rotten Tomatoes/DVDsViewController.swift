@@ -26,10 +26,6 @@ class DVDsViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
-        TSMessage.setDefaultViewController(self.navigationController)
-        
         // show loading notification
         // disable UI interaction
         EZLoadingActivity.show("Loading...", disableUI: true)
