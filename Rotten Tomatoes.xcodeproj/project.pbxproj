@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B22B6591D080063005A24BB /* DVDDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B22B6581D080063005A24BB /* DVDDetailsViewController.swift */; };
+		6B22B65B1D093856005A24BB /* CustomURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B22B65A1D093855005A24BB /* CustomURLCache.swift */; };
 		6B3B38681CFEFB0300842B5F /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B38671CFEFB0200842B5F /* MovieDetailsViewController.swift */; };
 		6B4F086E1D055C0B000C8254 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F086D1D055C0B000C8254 /* AppExtensions.swift */; };
 		6B4F089A1D06D92E000C8254 /* DVDsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4F08991D06D92E000C8254 /* DVDsViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		334AFD8F9368BDB4C7F02B60 /* Pods-Rotten Tomatoes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rotten Tomatoes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rotten Tomatoes/Pods-Rotten Tomatoes.debug.xcconfig"; sourceTree = "<group>"; };
 		6B22B6581D080063005A24BB /* DVDDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDDetailsViewController.swift; sourceTree = "<group>"; };
+		6B22B65A1D093855005A24BB /* CustomURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomURLCache.swift; sourceTree = "<group>"; };
 		6B3B38671CFEFB0200842B5F /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		6B4F086D1D055C0B000C8254 /* AppExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		6B4F08991D06D92E000C8254 /* DVDsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDsViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				6BF972221CFEA09C00AF2D42 /* View Controllers */,
 				6BF9720E1CFE9FA800AF2D42 /* AppDelegate.swift */,
 				6B4F086D1D055C0B000C8254 /* AppExtensions.swift */,
+				6B22B65A1D093855005A24BB /* CustomURLCache.swift */,
 				6BF972121CFE9FA800AF2D42 /* Main.storyboard */,
 				6BF972151CFE9FA800AF2D42 /* Assets.xcassets */,
 				6BF972171CFE9FA800AF2D42 /* LaunchScreen.storyboard */,
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B22B65B1D093856005A24BB /* CustomURLCache.swift in Sources */,
 				6B3B38681CFEFB0300842B5F /* MovieDetailsViewController.swift in Sources */,
 				6BF9720F1CFE9FA800AF2D42 /* AppDelegate.swift in Sources */,
 				6B4F086E1D055C0B000C8254 /* AppExtensions.swift in Sources */,

@@ -416,8 +416,7 @@
       Movies View and DVDs View are similar but have to duplicate implementation
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
@@ -435,13 +434,12 @@
       with animation, location will change, violate with auto layout rules, how to resolve?
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465366962380" POSITION="left" TEXT="external research">
+<node COLOR="#0033ff" CREATED="1464944312087" ID="ID_136714950" MODIFIED="1465447533893" POSITION="left" TEXT="external research">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <node COLOR="#00b439" CREATED="1464944346053" ID="ID_1064620503" LINK="http://shrikar.com/swift-ios-tutorial-uisearchbar-and-uisearchbardelegate/" MODIFIED="1465220832197" TEXT="Swift iOS Tutorial: UISearchBar and UISearchBarDelegate">
@@ -452,11 +450,7 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1465187623567" ID="ID_384055995" LINK="http://www.overacker.me/blog/2015/01/12/image-caching-with-afnetworking" MODIFIED="1465187631354" TEXT="Image Caching With AFNetworking">
-<edge STYLE="bezier" WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="16"/>
-</node>
-<node COLOR="#00b439" CREATED="1465188677045" ID="ID_520576006" LINK="http://stackoverflow.com/questions/22686087/white-flash-when-setimagewithurl-displays-a-cached-image" MODIFIED="1465188697527" TEXT="White flash when setImageWithUrl displays a cached image">
+<node COLOR="#00b439" CREATED="1465188677045" ID="ID_520576006" LINK="http://stackoverflow.com/questions/22686087/white-flash-when-setimagewithurl-displays-a-cached-image" MODIFIED="1465447524191" TEXT="White flash when setImageWithUrl displays a cached image">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -486,7 +480,7 @@
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 </node>
-<node COLOR="#00b439" CREATED="1465282541935" ID="ID_979161640" MODIFIED="1465282551118" TEXT="Scroll View">
+<node COLOR="#00b439" CREATED="1465282541935" FOLDED="true" ID="ID_979161640" MODIFIED="1465447536608" TEXT="Scroll View">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
 <node COLOR="#990000" CREATED="1465282520327" ID="ID_378227244" LINK="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithScrollViews.html" MODIFIED="1465282557495" TEXT="Working with Scroll Views">
@@ -505,6 +499,25 @@
 <node COLOR="#00b439" CREATED="1465376812439" ID="ID_215830700" LINK="http://stackoverflow.com/questions/24215117/how-to-recognize-swipe-in-all-4-directions" MODIFIED="1465376812478" TEXT="stackoverflow.com &gt; Questions &gt; 24215117 &gt; How-to-recognize-swipe-in-all-4-directions">
 <edge STYLE="bezier" WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="16"/>
+</node>
+<node COLOR="#00b439" CREATED="1465447435217" ID="ID_1578492232" MODIFIED="1465448819607" TEXT="AFNetworking cache">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<node COLOR="#990000" CREATED="1465446306172" ID="ID_1031924384" LINK="http://stackoverflow.com/questions/31114846/image-caching-with-afnetworking" MODIFIED="1465447483753" TEXT="Image Caching With AFNetworking">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1465447427384" ID="ID_1142040856" LINK="http://stackoverflow.com/questions/36270552/afnetworking-3-0-on-disk-image-caching" MODIFIED="1465447511157" TEXT="AFNetworking 3.0 on disk image caching">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1465187623567" ID="ID_384055995" LINK="http://www.overacker.me/blog/2015/01/12/image-caching-with-afnetworking" MODIFIED="1465447524241" TEXT="Image Caching With AFNetworking">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+</node>
+<node COLOR="#990000" CREATED="1465455065466" ID="ID_473412605" LINK="http://blog.originate.com/blog/2014/02/20/afimagecache-vs-nsurlcache/" MODIFIED="1465455065484" TEXT="blog.originate.com &gt; Blog &gt; 2014 &gt; 02 &gt; 20 &gt; Afimagecache-vs-nsurlcache">
+<font NAME="SansSerif" SIZE="14"/>
+</node>
 </node>
 </node>
 <node COLOR="#0033ff" CREATED="1465191871049" FOLDED="true" ID="ID_550950703" MODIFIED="1465272019075" POSITION="left" TEXT="Bai tap tham khao">
