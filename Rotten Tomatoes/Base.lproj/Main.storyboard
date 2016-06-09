@@ -348,6 +348,7 @@
                         <outlet property="posterImage" destination="Hkm-ag-39x" id="9fR-XK-kat"/>
                         <outlet property="swipeButton" destination="qWa-XS-n26" id="oPb-qy-rsO"/>
                         <outlet property="swipeView" destination="eh5-ue-N6E" id="Mkj-R8-A7e"/>
+                        <outlet property="swipeView_HeightConstrant" destination="MBA-sy-nKt" id="xYz-PW-eKV"/>
                         <outlet property="synopsisLabel" destination="r26-kv-qgs" id="e21-JN-Jb3"/>
                         <outlet property="titleLabel" destination="aj6-lm-PfR" id="ekE-FB-sTq"/>
                     </connections>
