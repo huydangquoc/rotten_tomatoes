@@ -31,7 +31,8 @@ Time spent: `24 hours`
 * [x] Choose locale currency
 * [x] Show/hide detail content (in DVD Detail) by swipe up/down
 
-[### Walkthrough](http://i.imgur.com/Jb6wHlS.gif)
+### Walkthrough
+[Imgur link](http://i.imgur.com/Jb6wHlS.gifv)
 
 Credits
 ---------
