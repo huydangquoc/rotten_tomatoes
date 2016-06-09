@@ -32,7 +32,7 @@ Time spent: `24 hours`
 * [x] Show/hide detail content (in DVD Detail) by swipe up/down
 
 ### Walkthrough
-![Video Walkthrough](http://i.imgur.com/Jb6wHlS.gifv)
+![Video Walkthrough](http://i.imgur.com/Jb6wHlS.gif)
 
 Credits
 ---------
